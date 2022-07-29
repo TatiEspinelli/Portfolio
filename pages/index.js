@@ -1,6 +1,5 @@
 import Layout from "../components/Layout";
 import { skills, experiences, projects } from "../profile";
-import Link from "next/link";
 
 const Index = () => (
   <Layout>
@@ -10,27 +9,36 @@ const Index = () => (
         <div className="card card-body bg-secondary text-light">
           <div className="row">
             <div className="col-md-4">
-              <img
-                src="/Foto.jpg"
-                alt="tati"
-                className="img-fluid"
-              />
+              <img src="/Foto.jpg" alt="tati" className="img-fluid" />
             </div>
             <div className="col-md-8">
               <h1> Tatiana Espinelli </h1>
               <h3>FrontEnd Developer</h3>
               <p>
                 Hello World! <br />
-                My name is Tatiana Espinelli. I'm from Uruguay, spanish is my native language and I speak fluent english. <br />
-                I love music, art, I'm a dancer and I love programming. I'm looking for my first job in this area and i'm very excited 
-                to finally make it and start working with amazing people and doing some great things! <br />
-                I'm a person that loves studing and learn new things every day, I'm never get tired of the process, I just love that we always
+                My name is Tatiana Espinelli. I'm from Uruguay, spanish is my
+                native language and I speak fluent english. <br />
+                I love music, art, I'm a dancer and I love programming. I'm
+                looking for my first job in this area and i'm very excited to
+                finally make it and start working with amazing people and doing
+                some great things! <br />
+                I'm a person that loves studing and learn new things every day,
+                I'm never get tired of the process, I just love that we always
                 can get better and keep growing. <br />
-                I'm an organized person, I like working with timelines and set goals to get things done.  <br />
-                I love eating, drink coffee, go to the theater, travel and read a good book. But most of all, I love spending time with my loved
-                ones.
+                I'm an organized person, I like working with timelines and set
+                goals to get things done. <br />I love eating, drink coffee, go
+                to the theater, travel and read a good book. But most of all, I
+                love spending time with my loved
               </p>
-              <a href="/hireme">Hire me</a>
+              <a
+                href="https://www.linkedin.com/in/tatiana-espinelli/"
+                target="blank"
+              >
+                <i class="bi bi-linkedin"></i>{" "}
+              </a>
+              <a href="https://github.com/TatiEspinelli" target="blank">
+                <i class="bi bi-github"></i>{" "}
+              </a>
             </div>
           </div>
         </div>
@@ -73,10 +81,6 @@ const Index = () => (
                 </li>
               ))}
             </ul>
-
-            <Link href="/experiences">
-              <a className="btn btn-light"> Know more </a>
-            </Link>
           </div>
         </div>
       </div>
@@ -89,10 +93,10 @@ const Index = () => (
         <div className="card card-body bg-dark">
           <div className="row">
             <div className="col-md-12">
-              <h1 className="text-center text-light"> Portfolio </h1>
+              <h1 className="text-center text-light"> Tati's Portfolio </h1>
             </div>
 
-            {projects.map(({ name, description, image }, i) => (
+            {projects.map(({ name, description, image, page }, i) => (
               <div className="col-md-4 p-2" key={i}>
                 <div className="card h-100">
                   <div className="overflow">
@@ -102,16 +106,11 @@ const Index = () => (
                   <div className="card-body">
                     <h3> {name} </h3>
                     <p> {description} </p>
-                    <a href="#!">Know more</a>
+                    <p> {page} </p>
                   </div>
                 </div>
               </div>
             ))}
-          </div>
-          <div className="text-center mt-4">
-            <Link href="/portfolio">
-              <a className="btn btn-outline-light"> More Projects </a>
-            </Link>
           </div>
         </div>
       </div>

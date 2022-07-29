@@ -2,10 +2,9 @@ import Layout from "../components/Layout";
 import Error from "./_error";
 
 const Github = ({ user, statusCode }) => {
-
-    if (statusCode) {
-        return <Error statusCode={statusCode} />
-    }
+  if (statusCode) {
+    return <Error statusCode={statusCode} />;
+  }
 
   return (
     <Layout footer={false} dark>
@@ -45,7 +44,7 @@ export async function getServerSideProps() {
   return {
     props: {
       user: data,
-      statusCode
+      statusCode,
     },
   };
 }
